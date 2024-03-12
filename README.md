@@ -40,3 +40,7 @@ This repository contains the backend codebase responsible for handling server-si
 4. Run the database migrations: `npx prisma migrate dev`
 5. Start the server: `npm run dev`
 
+
+### API Documentation: https://documenter.getpostman.com/view/26694209/2sA2xjyWRv
+
+
