@@ -44,9 +44,34 @@ const getAllFromDB = async (params: any, options: any) => {
             createdAt: 'desc'
         }
     });
+
+    const total = await prisma.admin.count({
+        where: whereConditons
+    });
+
+    return {
+        meta: {
+            page,
+            limit,
+            total
+        },
+        data: result
+    };
+};
+
+const getByIdFromDB = async (id: string) => {
+    const result = await prisma.admin.findUnique({
+        where: {
+            id
+        }
+    })
+
     return result;
-}
+};
+
+
 
 export const AdminService = {
-    getAllFromDB
+    getAllFromDB,
+    getByIdFromDB
 }
