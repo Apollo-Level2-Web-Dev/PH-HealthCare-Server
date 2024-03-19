@@ -2,7 +2,6 @@ import { UserStatus } from "@prisma/client";
 import { jwtHelpers } from "../../../helpars/jwtHelpers";
 import prisma from "../../../shared/prisma";
 import * as bcrypt from 'bcrypt'
-import jwt, { JwtPayload } from 'jsonwebtoken';
 
 const loginUser = async (payload: {
     email: string,
