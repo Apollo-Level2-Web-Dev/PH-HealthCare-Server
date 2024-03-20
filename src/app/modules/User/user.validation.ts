@@ -1,4 +1,4 @@
-import { Gender } from "@prisma/client";
+import { Gender, UserRole, UserStatus } from "@prisma/client";
 import { z } from "zod";
 
 const createAdmin = z.object({
@@ -71,8 +71,15 @@ const createPatient = z.object({
     })
 });
 
+const updateStatus = z.object({
+    body: z.object({
+        status: z.enum([UserStatus.ACTIVE, UserStatus.BLOCKED, UserStatus.DELETED])
+    })
+})
+
 export const userValidation = {
     createAdmin,
     createDoctor,
-    createPatient
+    createPatient,
+    updateStatus
 }
