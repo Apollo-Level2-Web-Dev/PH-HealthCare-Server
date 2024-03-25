@@ -23,23 +23,25 @@ const getAllFromDB = async (
                 },
             })),
         });
-    }
+    };
+
+    // doctor > doctorSpecialties > specialties -> title
 
     if (specialties && specialties.length > 0) {
-        // Corrected specialties condition
         andConditions.push({
             doctorSpecialties: {
                 some: {
                     specialities: {
                         title: {
                             contains: specialties,
-                            mode: 'insensitive',
-                        },
-                    },
-                },
-            },
-        });
-    }
+                            mode: 'insensitive'
+                        }
+                    }
+                }
+            }
+        })
+    };
+
 
     if (Object.keys(filterData).length > 0) {
         const filterConditions = Object.keys(filterData).map(key => ({
