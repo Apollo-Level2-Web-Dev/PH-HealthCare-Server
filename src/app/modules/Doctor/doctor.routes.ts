@@ -7,8 +7,10 @@ import { DoctorValidation } from './doctor.validation';
 
 const router = express.Router();
 
+// task 3
 router.get('/', DoctorController.getAllFromDB);
 
+//task 4
 router.get('/:id', DoctorController.getByIdFromDB);
 
 router.patch(
@@ -18,12 +20,14 @@ router.patch(
     DoctorController.updateIntoDB
 );
 
+//task 5
 router.delete(
     '/:id',
     auth(UserRole.SUPER_ADMIN, UserRole.ADMIN),
     DoctorController.deleteFromDB
 );
 
+// task 6
 router.delete(
     '/soft/:id',
     auth(UserRole.SUPER_ADMIN, UserRole.ADMIN),
