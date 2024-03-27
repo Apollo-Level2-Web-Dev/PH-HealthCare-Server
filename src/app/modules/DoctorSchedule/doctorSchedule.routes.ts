@@ -15,6 +15,12 @@ router.post(
     '/',
     auth(UserRole.DOCTOR),
     DoctorScheduleController.insertIntoDB
+);
+
+router.delete(
+    '/:id',
+    auth(UserRole.DOCTOR),
+    DoctorScheduleController.deleteFromDB
 )
 
 
