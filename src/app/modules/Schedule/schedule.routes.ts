@@ -17,7 +17,16 @@ router.post(
     ScheduleController.inserIntoDB
 );
 
+/**
+ * API ENDPOINT: /schedule/:id
+ * 
+ * Get schedule data by id
+ */
 
-
+/**
+ * API ENDPOINT: /schdeule/:id
+ * 
+ * Delete schedule data by id
+ */
 
 export const ScheduleRoutes = router;

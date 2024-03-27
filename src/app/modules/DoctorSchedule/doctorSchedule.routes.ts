@@ -5,6 +5,12 @@ import { UserRole } from '@prisma/client';
 
 const router = express.Router();
 
+/**
+ * API ENDPOINT: /doctor-schedule/
+ * 
+ * Get all doctor schedule with filtering
+ */
+
 router.get(
     '/my-schedule',
     auth(UserRole.DOCTOR),
@@ -21,7 +27,7 @@ router.delete(
     '/:id',
     auth(UserRole.DOCTOR),
     DoctorScheduleController.deleteFromDB
-)
+);
 
 
 export const DoctorScheduleRoutes = router;
