@@ -35,7 +35,6 @@ router.post(
  * 
  * Delete schedule data by id
  */
-
 router.delete(
     '/:id',
     auth(UserRole.SUPER_ADMIN, UserRole.ADMIN),
