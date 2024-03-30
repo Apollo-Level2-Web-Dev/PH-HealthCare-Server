@@ -32,6 +32,11 @@ router.post(
     AppointmentController.createAppointment
 );
 
+router.patch(
+    '/status/:id',
+    AppointmentController.changeAppointmentStatus
+)
+
 
 
 export const AppointmentRoutes = router;

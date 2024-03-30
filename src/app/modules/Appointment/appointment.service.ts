@@ -204,8 +204,13 @@ const getAllFromDB = async (
     };
 };
 
+const changeAppointmentStatus = async () => {
+
+}
+
 export const AppointmentService = {
     createAppointment,
     getMyAppointment,
-    getAllFromDB
+    getAllFromDB,
+    changeAppointmentStatus
 }
