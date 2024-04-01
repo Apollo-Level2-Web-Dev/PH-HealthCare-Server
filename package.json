@@ -6,7 +6,8 @@
   "author": "fahimahammed <fahimahammed.cse@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "seed": "ts-node-dev --respawn --transpile-only prisma/seed.ts"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
