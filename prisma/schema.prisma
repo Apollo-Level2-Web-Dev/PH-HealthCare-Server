@@ -208,7 +208,7 @@ model Payment {
   appointment   Appointment @relation(fields: [appointmentId], references: [id])
 
   amount             Float
-  transactionId      String
+  transactionId      String        @unique
   status             PaymentStatus @default(UNPAID)
   paymentGatewayData Json?
   createdAt          DateTime      @default(now())
