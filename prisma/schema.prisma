@@ -162,7 +162,7 @@ model DoctorSchedules {
   scheduleId String
   schedule   Schedule @relation(fields: [scheduleId], references: [id])
 
-  isBooked Boolean
+  isBooked Boolean @default(false)
 
   appointmentId String?
 
